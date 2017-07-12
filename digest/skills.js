@@ -2,6 +2,8 @@ const utils = require('./utils')
 
 module.exports = digest => {
 
+  console.log(digest.skillContexts)
+
   digest.skills = {}
 
   const getSkillByRawText = rawText => {
@@ -19,6 +21,10 @@ module.exports = digest => {
       assertIdenticalSkills(preExistingSkill, newSkill)
       return preExistingSkill
     }
+    newSkill.contexts = digest.skillContexts.filter(skillContext =>
+      newSkill.name.toLowerCase().includes(skillContext.toLowerCase())
+    )
+    assertSkillContainsAtLeastOneSkillContext(newSkill)
     digest.skills[id] = newSkill
     return newSkill
   }
@@ -34,6 +40,16 @@ module.exports = digest => {
         )
       }
     })
+  }
+
+  const assertSkillContainsAtLeastOneSkillContext = (skill) => {
+    if (skill.contexts.length === 0){
+      // throw new Error(
+      console.warn(
+        `Skill Missing Context Error for skill ${JSON.stringify(skill.name)}\n`+
+        `Found in modules:\n  ${skill.modules.join("\n  ")}`
+      )
+    }
 
   }
 

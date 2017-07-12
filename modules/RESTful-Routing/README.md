@@ -2,8 +2,8 @@
 
 ## Skills
 
-- Can describe what REST is
-- Can design an API which is RESTful
+- Can describe what HTTP REST is
+- Can design an HTTP API which is RESTful
 - Can describe the difference between query params and body params and url params
 - Can describe the use cases for the `PUT` and `DELETE` HTTP methods
 - Can describe when to respond with the HTTP status code 201

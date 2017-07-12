@@ -26,7 +26,7 @@ You **should not** use real data - just use placeholder text and images from the
 - Can position elements with flexbox in HTML & CSS
 - Can hide elements using `display` in HTML & CSS
 - Can inspect and change CSS using the Chrome Developer Tools
-- Can convert a mockup into an HTML page with proper styling
+- Can convert a mockup into an HTML & CSS page with proper styling
 
 ## Specifications
 

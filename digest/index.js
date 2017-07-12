@@ -19,8 +19,12 @@ module.exports = () =>
       'HTML & CSS',
       'Slack',
       'Google',
-      'editor',
-      'terminal'
+      'Editor',
+      'Terminal',
+      'Bash',
+      'UNIX',
+      'Heroku',
+      'shell'
     ]
     return digest
   })
